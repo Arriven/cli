@@ -177,13 +177,14 @@ When creating a custom network, the default network driver (i.e. `bridge`) has
 additional options that can be passed. The following are those options and the
 equivalent docker daemon flags used for docker0 bridge:
 
-| Option                                           | Equivalent  | Description                                           |
-|--------------------------------------------------|-------------|-------------------------------------------------------|
-| `com.docker.network.bridge.name`                 | -           | bridge name to be used when creating the Linux bridge |
-| `com.docker.network.bridge.enable_ip_masquerade` | `--ip-masq` | Enable IP masquerading                                |
-| `com.docker.network.bridge.enable_icc`           | `--icc`     | Enable or Disable Inter Container Connectivity        |
-| `com.docker.network.bridge.host_binding_ipv4`    | `--ip`      | Default IP when binding container ports               |
-| `com.docker.network.driver.mtu`                  | `--mtu`     | Set the containers network MTU                        |
+| Option                                           | Equivalent  | Description                                                  |
+|--------------------------------------------------|-------------|--------------------------------------------------------------|
+| `com.docker.network.bridge.name`                 | -           | bridge name to be used when creating the Linux bridge        |
+| `com.docker.network.bridge.enable_ip_masquerade` | `--ip-masq` | Enable IP masquerading                                       |
+| `com.docker.network.bridge.enable_icc`           | `--icc`     | Enable or Disable Inter Container Connectivity               |
+| `com.docker.network.bridge.host_binding_ipv4`    | `--ip`      | Default IP when binding container ports                      |
+| `com.docker.network.driver.mtu`                  | `--mtu`     | Set the containers network MTU                               |
+| `com.docker.network.container_iface_prefix`      | -           | Custom interface prefix to be used when creating container   |
 
 The following arguments can be passed to `docker network create` for any
 network driver, again with their approximate equivalents to `docker daemon`.
